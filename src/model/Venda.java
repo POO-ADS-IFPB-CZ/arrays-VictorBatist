@@ -35,4 +35,15 @@ public class Venda {
         return Arrays.copyOf(itens, quantidadeItens);
     }
 
+    public boolean removerItem(int indice) {
+        if (indice < 0 || indice >= quantidadeItens) {
+            return false;
+        }
+        for (int i = indice; i < quantidadeItens - 1; i++) {
+            itens[i] = itens[i + 1];
+        }
+        itens[--quantidadeItens] = null;
+        return true;
+    }
+
 }

@@ -5,10 +5,10 @@ public class Produto {
     private int codigo;
     private String descricao;
     //Visibilidade de pacote (package) ou default
-    double preco;
+    float preco;
     private Categoria categoria;
 
-    public Produto(int codigo, String descricao, double preco, Categoria categoria) {
+    public Produto(int codigo, String descricao, float preco, Categoria categoria) {
         this.codigo = codigo;
         this.descricao = descricao;
         this.preco = preco;
@@ -29,6 +29,10 @@ public class Produto {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public float getPreco() {
+        return preco;
     }
 
     public Categoria getCategoria() {
